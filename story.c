@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void phrase4(void) {
+    printf("Je vais aller manger un gouter.\n");
+}
+
 void phrase3(void)
 {
     printf("et la Tempête l'emporta\n");
@@ -17,5 +21,6 @@ int main(void)
     printf("Les fourmis sont belles\n");
     phrase2();
     phrase3();
+    phrase4();
     return 0;
 }
