@@ -35,9 +35,9 @@
 
 ## Astuces utiles
 
-`git add .` : ajoute tout le dossier dans lequel vous êtes aux fichiers suivis.
+`git add .` : ajoute tous les fichiers modifiés du répertoire courant (ainsi que ceux les sous-répertoires) aux fichiers suivis.
 
-`git add -A` : ajoute tout les fichiers aux fichiers suivis.
+`git add -A` : ajoute tous les fichiers modifiés depuis le dernier commit aux fichiers suivis.
 
 `git reset --hard HEAD` : revient au commit actuel.
 
