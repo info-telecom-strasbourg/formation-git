@@ -20,11 +20,11 @@
 
 `git status` : indique quels fichiers vont être sauvegardés localement (en vert) et ceux qui ne le seront pas (en rouge).
 
-`git log` : affiche la liste des derniers commits.
+`git log --abbrev-commit` : affiche la liste des derniers commits.
 
-`git checkout [id du commit]` : retourne sur le commit donné en lecture.
+`git checkout [sha du commit]` : retourne sur le commit donné en lecture.
 
-`git reset --hard [id du commit]` : retourne sur le commit donné. Comme si les commits suivant avaient été effacés.
+`git reset --hard [sha du commit]` : retourne sur le commit donné. Comme si les commits suivant avaient été effacés.
 
 `git branch -D [nom de la branche]` : supprime localement la branche.
 
@@ -39,10 +39,18 @@
 
 `git add -A` : ajoute tous les fichiers modifiés depuis le dernier commit aux fichiers suivis.
 
-`git reset --hard HEAD` : revient au commit actuel.
 
-`git reset --hard HEAD ~ 3` : revient 3 commits en arrière.
+`git reset HEAD ~ [nb de commit] --soft` : annule les nb de commit derniers commits sans perdre le code actuel.
 
+`git reset HEAD ~ [nb de commit] --mixed` : annule les nb de commit derniers commits et annule le add sans perdre le code actuel.
+
+`git reset --hard` : annule toutes les modifications et revient au commit actuel.
+
+`git reset HEAD ~ [nb de commit] --hard` : revient nb de commit commits en arrière et supprime le code associé.
+
+Annuler des commits:
+`git reset HEAD ~ [nb de commit] --hard`
+`git push origin +[nom branche]` : le '+' n'est pas une erreur et est obligatoire.
 
 ## Exemple d'utilisation
 
