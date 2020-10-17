@@ -1,8 +1,6 @@
 #include "story.h"
 
-int main(int argc, char const *argv[])
+int main(void)
 {
-    (void)argc;
-    (void)argv;
     return 0;
 }
