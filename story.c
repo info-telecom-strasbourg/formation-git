@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    printf("Bienvenue!");
+    printf("Les fourmis sont belles");
     return 0;
 }
