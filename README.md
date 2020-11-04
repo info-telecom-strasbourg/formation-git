@@ -87,16 +87,16 @@ si vous utilisé un Mac, vous pouvez l’appeler MacBook.
 `git add -A` : ajoute tous les fichiers modifiés depuis le dernier commit aux fichiers suivis.
 
 
-`git reset HEAD ~ [nb de commit] --soft` : annule les nb de commit derniers commits sans perdre le code actuel.
+`git reset HEAD~[nb de commit] --soft` : annule les nb de commit derniers commits sans perdre le code actuel.
 
-`git reset HEAD ~ [nb de commit] --mixed` : annule les nb de commit derniers commits et annule le add sans perdre le code actuel.
+`git reset HEAD~[nb de commit] --mixed` : annule les nb de commit derniers commits et annule le add sans perdre le code actuel.
 
 `git reset --hard` : annule toutes les modifications et revient au commit actuel.
 
-`git reset HEAD ~ [nb de commit] --hard` : revient nb de commit commits en arrière et supprime le code associé.
+`git reset HEAD~[nb de commit] --hard` : revient nb de commit commits en arrière et supprime le code associé.
 
 Annuler des commits:
-`git reset HEAD ~ [nb de commit] --hard`
+`git reset HEAD~[nb de commit] --hard`
 `git push origin +[nom branche]` : le '+' n'est pas une erreur et est obligatoire.
 
 ## Exemple d'utilisation
