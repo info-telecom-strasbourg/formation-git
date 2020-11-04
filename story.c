@@ -13,6 +13,7 @@ void phrase3(void)
 void phrase2(void)
 {
     printf("La fourmi allait faire un long voyage semé d'embûches à travers la tempête \n");
+    printf("Aïe\n");
     return;
 }
 
