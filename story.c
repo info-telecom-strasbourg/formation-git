@@ -23,5 +23,6 @@ int main(void)
     phrase3();
     phrase4();
 	puts("- Baudelaire");
+    puts("Youpi!");
     return 0;
 }
