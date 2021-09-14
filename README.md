@@ -95,6 +95,8 @@ si vous utilisé un Mac, vous pouvez l’appeler MacBook.
 
 `git reset HEAD~[nb de commit] --hard` : revient nb de commit commits en arrière et supprime le code associé.
 
+[Si vous avez un problème, ce lien pourrait être utilise.](https://ohshitgit.com/)
+
 Annuler des commits:
 `git reset HEAD~[nb de commit] --hard`
 `git push origin +[nom branche]` : le '+' n'est pas une erreur et est obligatoire.
