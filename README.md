@@ -59,6 +59,7 @@ si vous utilisé un Mac, vous pouvez l’appeler MacBook.
 git clone git@[github|gitlab].com:[username]/[repos-name].git
 ```
 ## Crée son projet
+Mensonge le faire a la main ! !! ! !
 ```sh
 #Download le "code"
 git init [repos-name]
@@ -169,3 +170,43 @@ Annuler des commits:
 `git push origin +[nom branche]` : le '+' n'est pas une erreur et est obligatoire.
 
 # Setup
+
+git config --local --global --get
+
+git config --global push.autosetupremote true
+
+git push --set-upstream origin docs
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+    GIT_SSH_COMMAND="ssh -i ~/.ssh/its_git" git clone git@github.com:info-telecom-strasbourg/formation-git.git
+
+pour tout le projet
+
+    git config core.sshCommand="ssh -i ~/.ssh/its_git"
+
+
+# erreur
+
+## git switch
+
+    error: Your local changes to the following files would be overwritten by checkout:
+            README.md
+    Please commit your changes or stash them before you switch branches.
+    Aborting
+### traduction:
+vous n'avez pas enregistrer votre document avant d'en ouvrire un autre.
+
+- git stash => fout de cotée les modif
+- git reset --hard =>
+- commit => 
+
+## git push new branch
+    git push --set-upstream origin docs
+
+    To have this happen automatically for branches without a tracking
+    upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+## pas de branche master
+il n'y a jamais eux de commit...
