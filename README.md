@@ -210,3 +210,55 @@ vous n'avez pas enregistrer votre document avant d'en ouvrire un autre.
 
 ## pas de branche master
 il n'y a jamais eux de commit...
+
+
+https://ohshitgit.com/#accidental-commit-master
+
+https://ohshitgit.com/#accidental-commit-wrong-branch
+
+
+git ls-tree -r HEAD --name-only
+
+
+    feat: for new features or functionality added to the project
+    fix: for bug fixes
+    docs: for documentation updates or additions
+    style: for changes to the project's style or formatting (e.g. CSS, formatting, etc.)
+    refactor: for changes to the code that do not add new features or fix bugs, but improve the structure or readability of the code
+    test: for changes to the project's testing framework or tests
+    chore: for changes to the build process or other tasks that do not affect the code itself (e.g. updating dependencies, configuring tools, etc.)
+
+
+
+
+
+from gitlab
+### Create a new repository
+```
+git clone git@[repo_domaine]:[username]/[project_name].git
+cd [project_name]
+git switch -c main
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin main
+```
+
+### Push an existing folder
+```
+cd existing_folder
+git init --initial-branch=main
+git remote add origin git@[repo_domaine]:[username]/[project_name].git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
+
+#### Push an existing Git repository
+```
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@[repo_domaine]:[username]/[project_name].git
+git push -u origin --all
+git push -u origin --tags
+```
