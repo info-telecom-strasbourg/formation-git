@@ -148,6 +148,7 @@ commende pour check les diff
 
 # Astuces utiles
 
+git show-branche : list les dépendance des branche au commit
 git rm --cached
 
 `git add .` : ajoute tous les fichiers modifiés du répertoire courant (ainsi que ceux les sous-répertoires) aux fichiers suivis.
@@ -171,26 +172,40 @@ Annuler des commits:
 
 # Setup
 
+### avoir accès au configuration
 git config --local --global --get
 
-git config --global push.autosetupremote true
 
 git push --set-upstream origin docs
 
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
 
-    GIT_SSH_COMMAND="ssh -i ~/.ssh/its_git" git clone git@github.com:info-telecom-strasbourg/formation-git.git
+## si clef privée spécifique:
 
-pour tout le projet
+### premier clone:
+git va utiliser la variable temporairement pour savoir comment utiliser ssh avec quelle clef.  
 
-    git config core.sshCommand="ssh -i ~/.ssh/its_git"
+    GIT_SSH_COMMAND="ssh -i ~/.ssh/[privkey]" git clone git@[domainename]:[username]/[project].git
+
+### pour tout le projet:
+
+    git config core.sshCommand="ssh -i ~/.ssh/[privkey]"
+
+## publier chaque nouvelle branche automatiquement:
+git config --global push.autosetupremote true
+## git config pull.*:
+### Merge:
+good for collaborative projects where multiple people are working on different parts of the code and need to merge their changes into a central repository.
+### Rebase:
+good for individual projects where you want to keep a clean, streamlined history of changes without cluttering it with merge commits.
+### Fast-orward only:
+good for situations where you know there are no conflicts between the two branches being merged and you want to keep a very clean and concise history of changes.
 
 
 # erreur
 
 ## git switch
-
     error: Your local changes to the following files would be overwritten by checkout:
             README.md
     Please commit your changes or stash them before you switch branches.
@@ -206,8 +221,14 @@ vous n'avez pas enregistrer votre document avant d'en ouvrire un autre.
     git push --set-upstream origin docs
 
     To have this happen automatically for branches without a tracking
-    upstream, see 'push.autoSetupRemote' in 'git help config'.
-
+    upstream, see 'push.autoSetupRemote' in 'git help config'. 
+### git push en retard
+    ! [rejected]        pullmerge -> pullmerge (non-fast-forward)
+    error: failed to push some refs to 'git.unistra.fr:louisduval/git_forma_conflict.git'
+    hint: Updates were rejected because the tip of your current branch is behind
+    hint: its remote counterpart. Integrate the remote changes (e.g.
+    hint: 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ## pas de branche master
 il n'y a jamais eux de commit...
 
@@ -232,6 +253,7 @@ git ls-tree -r HEAD --name-only
 
 
 
+## comment ce brancher a un projet
 from gitlab
 ### Create a new repository
 ```
