@@ -149,7 +149,12 @@ commende pour check les diff
 # Astuces utiles
 
 git show-branche : list les dépendance des branche au commit
-git rm --cached
+git rm --cached: remove a file from track list
+git merge --abort : cancel un merge
+
+git mergetool: use for merging 
+gitk --all : show les tt les branch and dep 
+git clean: use for clean untrack file
 
 `git add .` : ajoute tous les fichiers modifiés du répertoire courant (ainsi que ceux les sous-répertoires) aux fichiers suivis.
 
@@ -203,8 +208,13 @@ good for individual projects where you want to keep a clean, streamlined history
 good for situations where you know there are no conflicts between the two branches being merged and you want to keep a very clean and concise history of changes.
 
 
-# erreur
+# erreur commune
 
+## conflic merge
+    Auto-merging main.c
+    CONFLICT (content): Merge conflict in main.c
+    Automatic merge failed; fix conflicts and then commit the result.
+oui il va faloir travailler est lire **religieusement** ce qu'on fait les collègue ... 
 ## git switch
     error: Your local changes to the following files would be overwritten by checkout:
             README.md
@@ -284,3 +294,6 @@ git remote add origin git@[repo_domaine]:[username]/[project_name].git
 git push -u origin --all
 git push -u origin --tags
 ```
+
+#### salty linus
+https://www.phoronix.com/news/Linus-Torvalds-Git-Merge-Wisdom
