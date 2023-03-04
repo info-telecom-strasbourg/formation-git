@@ -1,0 +1,20 @@
+[submodule "exemple/pullmerge"]
+	path = exemple/pullmerge
+	url = git@git.unistra.fr:louisduval/git_forma_conflict.git
+	branch = pullmerge
+[submodule "exemple/merging2branch"]
+	path = exemple/merging2branch
+	url = git@git.unistra.fr:louisduval/git_forma_conflict.git
+	branch = merging2branch
+[submodule "exemple/projet"]
+	path = exemple/projet
+	url = git@git.unistra.fr:louisduval/git_forma_p1.git
+[submodule "exemple/miniprojet/projetG3"]
+	path = exemple/miniprojet/projetG3
+	url = git@git.unistra.fr:louisduval/git_forma_p3.git
+[submodule "exemple/miniprojet/projetG2"]
+	path = exemple/miniprojet/projetG2
+	url = git@git.unistra.fr:louisduval/git_forma_p2.git
+[submodule "exemple/miniprojet/projetG1"]
+	path = exemple/miniprojet/projetG1
+	url = git@git.unistra.fr:louisduval/git_forma_p1.git
